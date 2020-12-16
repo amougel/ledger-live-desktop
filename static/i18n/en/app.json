@@ -1882,6 +1882,11 @@
       "experimental": "Experimental features",
       "accounts": "Accounts"
     },
+    "revealer": {
+      "title": "Create a revealer card",
+      "desc": "Save your recovery phrase by encoding it in a revealer card.",
+      "getStarted": "Get started"
+    },
     "export": {
       "accounts": {
         "title": "Export accounts",

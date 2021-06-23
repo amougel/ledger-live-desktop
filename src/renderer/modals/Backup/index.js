@@ -24,6 +24,7 @@ import { hardReset, reload } from "~/renderer/reset";
 import rimraf from "rimraf";
 import { TopBannerContainer } from "~/renderer/screens/dashboard";
 import Alert from "~/renderer/components/Alert";
+import { command } from "~/renderer/commands";
 
 const userDataPath = resolveUserDataDirectory();
 const userDataFile = path.resolve(userDataPath, "app.json");
@@ -55,6 +56,20 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+const sub = command("dropBox")({ }).subscribe({
+  complete: () => console.log("finished rendererdropbox"),
+  error: error => console.log("oops rendererdropbox", error),
+  next: e => console.log("event rendererdropbox", e),
+});
+
+/*
+renderer:
+    const sub = command("toto")({ ...any parameters that can be serialized... }).subscribe({
+      complete: () => console.log("finished"),
+      error: error => console.log("oops", error),
+      next: e => console.log("event", e),
+    });
+    // sub.unsubscribe()  permet de close côté renderer*/
 
 const Item = ({
   Icon,

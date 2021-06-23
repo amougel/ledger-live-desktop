@@ -2,6 +2,7 @@
 import checkRPCNodeConfig from "./checkRPCNodeConfig";
 import firmwarePrepare from "./firmwarePrepare";
 import firmwareMain from "./firmwareMain";
+import dropBox from "./dropBox";
 import firmwareRepair from "./firmwareRepair";
 import flushDevice from "./flushDevice";
 import firmwareUpdating from "./firmwareUpdating";
@@ -44,6 +45,7 @@ export const commandsById = {
   connectManager,
   listApps,
   ping,
+  dropBox,
   testApdu,
   initSwap,
   checkSignatureAndPrepare,
